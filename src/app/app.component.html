@@ -19,7 +19,7 @@
     </div>
 
     <div class="col-4 d-flex justify-content-center mt-4">
-      <button class="btn btn-primary" type="submit" [disabled]="rForm.invalid">Submit</button>
+      <button type="submit" [disabled]="rForm.invalid" [ngClass]="rForm.invalid ? 'btn btn-secondary':'btn btn-primary'">Submit</button>
     </div>
   </form>
 </div>
