@@ -27,13 +27,13 @@
         <div class="col-6">
           <label class="form-label">Skill1 :</label>
           <input type="text" name="field1" class="form-control" formControlName="field1">
-          <span class="text-danger" *ngIf="">Please enter valid skill address*</span>
+          <span class="text-danger" *ngIf="skill.controls.field1 && skill.controls.field1.touched && skill.controls.field1.invalid">Please enter valid skill*</span>
         </div>
     
         <div class="col-6">
           <label class="form-label">Skill2 :</label>
           <input type="text" name="field2" class="form-control" formControlName="field2">
-          <span class="text-danger" *ngIf="">Please enter valid skill address*</span>
+          <span class="text-danger" *ngIf="skill.controls.field2 && skill.controls.field2.touched && skill.controls.field2.invalid">Please enter valid skill*</span>
         </div>
 
         <div class="col-3 mt-4 mb-4">
