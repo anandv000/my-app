@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "name": "Tushar",
+      "age": 23,
+      "email": "tusharbhalani@gmail.com",
+      "skills": [
+        {
+          "field1": "development",
+          "field2": "playing"
+        }
+      ],
+      "id": "a733"
+    },
+    {
+      "name": "aaaa",
+      "age": 12,
+      "email": "tusharbhalani@gmail.com",
+      "skills": [
+        {
+          "field1": "1545",
+          "field2": "asas"
+        }
+      ],
+      "id": "f13a"
+    }
+  ]
+}
