@@ -1,0 +1,20 @@
+<!-- <p>caustomeincrement works!</p> -->
+
+<form (submit)="onCusInc()">
+    <input type="text" name="counter" placeholder="addCounterValue" [(ngModel)]="counter">
+    <!-- <input type="text" name="counter" #counter> -->
+     <select name="action" [(ngModel)]="action">
+        <option value="add">Add</option>
+        <option value="remove">Remove</option>
+     </select>
+    <button>Add</button>
+</form>
+
+<br>
+
+<form (submit)="onchangeUserName()">
+    <input type="text" name="ChangeUserName" placeholder="ChangeUserName" [(ngModel)]="ChangeUserName">
+    <button>Add</button>
+</form>
+
+

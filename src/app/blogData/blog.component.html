@@ -1,0 +1,59 @@
+<p>blog works!</p>
+
+<div *ngIf="!blogError">
+    <div>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Details</th>
+            </tr>
+
+            <tr *ngFor="let data of blogList">
+                <td>{{data.id}}</td>
+                <td>{{data.title}}</td>
+                <td>{{data.description}}</td>
+                <td><button (click)="onEdit(data.id)">Edit</button></td>
+                <td><button (click)="onDelete(data.id)">Delete</button></td>
+                <td><button (click)="onDetails(data)">Details</button></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <button (click)="onClose()">AddBlogs</button>
+
+
+
+    <div *ngIf="isOpen">
+        <div class="row">
+            <div class="col">
+                <div class="txt1">
+                    <h3>Add blog</h3>
+                </div>
+                <div>
+                    <form [formGroup]="blogForm" (ngSubmit)="onAddBlog()">
+                        <input type="text" formControlName="id" name="id" id="id" placeholder="add Id">
+                        <input type="text" formControlName="title" name="title" id="title" placeholder="add Title">
+                        <input type="text" formControlName="description" name="description" id="description"
+                            placeholder="add Description">
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="blogError">
+    <p style="color: red">{{blogError}}</p>
+</div>
+<div *ngIf="!blogList.length">
+    <h2>No Data Found</h2>
+</div>
+<!-- <div *ngIf="!blogList.length && !blogError">
+    <h2>No Data Found</h2>
+</div> -->
+
