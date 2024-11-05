@@ -64,9 +64,9 @@ export class BlogComponent implements OnInit {
        this.isedit = true;
        this.editFormData = blogList;
        this.blogForm.setValue({
-          id:this.editFormData.id,
-          title:this.editFormData.title,
-          description:this.editFormData.description
+          id:this.editFormData?.id,
+          title:this.editFormData?.title,
+          description:this.editFormData?.description
        })
     });
     // this.store.select(getBlog).subscribe((blogList:any) => {
