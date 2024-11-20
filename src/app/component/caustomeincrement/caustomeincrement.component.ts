@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { appStateModel } from 'src/app/shared/global/appState,model';
-import { caustomeincrement, changeUserName } from 'src/app/shared/store/counter.actions';
+import { caustomeIncrement, changeUserName } from 'src/app/shared/store/counter.actions';
 import { CounterandUserModel } from 'src/app/shared/store/counter.model';
 
 @Component({
@@ -21,7 +21,7 @@ export class CaustomeincrementComponent {
 
   onCusInc() {
     // console.log(this.counter)
-    this.store.dispatch(caustomeincrement({value: Number(this.counter), action: this.action}))
+    this.store.dispatch(caustomeIncrement({value: Number(this.counter), action: this.action}))
     // this.store.dispatch(caustomeincrement({value: Number(this.counter.nativeElement.value)}))
   }
 
