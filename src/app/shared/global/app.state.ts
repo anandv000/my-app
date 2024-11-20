@@ -4,7 +4,7 @@ import { blogReducer } from "../store/blog/blog.reducer";
 import { counterReducer } from "../store/counter.reducer";
 
 export const appState = {
-    couter:counterReducer,
+    counter:counterReducer,
     blog:blogReducer,
     router:routerReducer
 }
