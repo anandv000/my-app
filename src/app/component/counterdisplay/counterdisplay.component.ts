@@ -17,10 +17,10 @@ export class CounterdisplayComponent implements OnInit{
   // Without subscribe using 
   counter$!:Observable<CounterandUserModel>;
 
-  constructor(private store: Store<{counter:CounterandUserModel}>) { }
+  constructor(private store: Store<appStateModel>) { }
 
   ngOnInit(): void {
-    this.store.select('counter').subscribe((res:any) =>{
+    this.store.select(getCounter).subscribe((res:any) =>{
       console.log(res)
       this.displayConter = res;
       console.log("CounterDisplay Work!")

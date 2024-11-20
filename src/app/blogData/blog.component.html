@@ -34,7 +34,7 @@
                     <h3>Add blog</h3>
                 </div>
                 <div>
-                    <form [formGroup]="blogForm" (ngSubmit)="onAddBlog()">
+                    <form [formGroup]="blogForm" (submit)="onAddBlog()">
                         <input type="text" formControlName="id" name="id" id="id" placeholder="add Id">
                         <input type="text" formControlName="title" name="title" id="title" placeholder="add Title">
                         <input type="text" formControlName="description" name="description" id="description"
@@ -48,7 +48,7 @@
 </div>
 
 <div *ngIf="blogError">
-    <p style="color: red">{{blogError}}</p>
+    <p class="text-danger">{{blogError}}</p>
 </div>
 <div *ngIf="!blogList.length">
     <h2>No Data Found</h2>
