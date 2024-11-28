@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { blogModel } from '../shared/store/blog/blog.model';
-import { getBlog, getBlogId, getBlogInfo } from '../shared/store/blog/blog.selector';
+import { getBlogId, getBlogInfo } from '../shared/store/blog/blog.selector';
 import { appStateModel } from '../shared/global/appState,model';
-import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { addBlog, blogData, deleteBlog, updateBlog } from '../shared/store/blog/blog.actions';
 import { Router } from '@angular/router';
 
